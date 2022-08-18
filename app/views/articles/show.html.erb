@@ -1,0 +1,16 @@
+<div class="container">
+	<div class=" container jumbletron1 shadow-lg bg-info" >
+	  <h1 class="display-4">Show Article Record</h1>
+	  <p class="lead">Title:<%= @article.title %>.</p>
+	  <hr class="my-4">
+	  <p>Description:<%= @article.description %></p>
+	  <p class="lead">
+	    <div class="btn btn-success">
+			<%= link_to "Back to Index Page", articles_path %>
+		</div>
+	    <div class="btn btn-success">
+			<%= link_to "Edit", edit_article_path(@article)%>
+		</div>
+	  </p>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+@import "bootstrap";
+
+h1{
+	color: red;
+}
+p{
+	color: white;
+}
+.jumbletron1{
+	text-align: center;
+	background-color: royalblue;
+}

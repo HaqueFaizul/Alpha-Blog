@@ -1,0 +1,24 @@
+<div class="container">
+  <% if @article.errors.any? %>
+    <h2>Following Error message is occuring</h2>
+    <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= form_with model: @article, class:"shadow-lg p-3 mb-5 bg-white rounded"  do |form| %>
+    <div class="mb-3">
+    	<%= form.label :title, class:"col-sm-2 col-form-label" %></br>
+    	 <%= form.text_field :title, class:"form-control col-sm-10"  %>
+    </div >
+    <div class="mb-3">
+    	<%= form.label :Description,class:"form-label" %></br>
+    	<%= form.text_area :description, class:"form-control" %>
+    </div>
+    <div class="btn btn-success">
+    	<button><%= form.submit %></button>
+    </div>
+  <% end %>
+</div>
